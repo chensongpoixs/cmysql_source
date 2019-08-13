@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="storage">
+      <UniqueIdentifier>{924ad7d7-efd0-407d-8b56-71f1e17a1f09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase">
+      <UniqueIdentifier>{013f88d4-c754-4b02-b68c-5164a558fc22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\mem">
+      <UniqueIdentifier>{c963e559-a7c5-4466-aeca-077fe686d267}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
