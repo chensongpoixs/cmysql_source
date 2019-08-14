@@ -10,5 +10,605 @@
     <Filter Include="storage\innobase\mem">
       <UniqueIdentifier>{c963e559-a7c5-4466-aeca-077fe686d267}</UniqueIdentifier>
     </Filter>
+    <Filter Include="storage\innobase\include">
+      <UniqueIdentifier>{be3913ac-3360-46d0-a629-1d278bdc6b51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\ut">
+      <UniqueIdentifier>{07cc31eb-5e79-43f9-9372-3668ed2150c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\os">
+      <UniqueIdentifier>{2546448c-d27e-4437-839d-f62538a114da}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="storage\innobase\mem\mem0dbg.c">
+      <Filter>storage\innobase\mem</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\mem\mem0mem.c">
+      <Filter>storage\innobase\mem</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\mem\mem0pool.c">
+      <Filter>storage\innobase\mem</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\ut\ut0byte.c">
+      <Filter>storage\innobase\ut</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\ut\ut0dbg.c">
+      <Filter>storage\innobase\ut</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\ut\ut0list.c">
+      <Filter>storage\innobase\ut</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\ut\ut0mem.c">
+      <Filter>storage\innobase\ut</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\ut\ut0rnd.c">
+      <Filter>storage\innobase\ut</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\ut\ut0ut.c">
+      <Filter>storage\innobase\ut</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\ut\ut0vec.c">
+      <Filter>storage\innobase\ut</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\ut\ut0wqueue.c">
+      <Filter>storage\innobase\ut</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\os\os0file.c">
+      <Filter>storage\innobase\os</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\os\os0proc.c">
+      <Filter>storage\innobase\os</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\os\os0sync.c">
+      <Filter>storage\innobase\os</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\os\os0thread.c">
+      <Filter>storage\innobase\os</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="storage\innobase\include\btr0btr.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\btr0cur.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\btr0pcur.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\btr0sea.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\btr0types.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\buf0buf.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\buf0flu.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\buf0lru.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\buf0rea.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\buf0types.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\data0data.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\data0type.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\data0types.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\db0err.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\dict0boot.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\dict0crea.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\dict0dict.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\dict0load.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\dict0mem.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\dict0types.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\dyn0dyn.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\eval0eval.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\eval0proc.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\fil0fil.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\fsp0fsp.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\fsp0types.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\fut0fut.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\fut0lst.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\ha_prototypes.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\ha0ha.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\hash0hash.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\ibuf0ibuf.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\ibuf0types.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\lock0iter.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\lock0lock.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\lock0priv.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\lock0types.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\log0log.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\log0recv.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\mach0data.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\mem0dbg.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\mem0mem.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\mem0pool.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\mtr0log.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\mtr0mtr.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\mtr0types.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\os0file.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\os0proc.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\os0sync.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\os0thread.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\page0cur.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\page0page.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\page0types.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\pars0grm.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\pars0opt.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\pars0pars.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\pars0sym.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\pars0types.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\que0que.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\que0types.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\read0read.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\read0types.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\rem0cmp.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\rem0rec.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\rem0types.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\row0ins.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\row0mysql.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\row0purge.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\row0row.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\row0sel.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\row0types.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\row0uins.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\row0umod.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\row0undo.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\row0upd.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\row0vers.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\srv0que.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\srv0srv.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\srv0start.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\sync0arr.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\sync0rw.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\sync0sync.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\sync0types.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\thr0loc.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\trx0purge.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\trx0rec.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\trx0roll.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\trx0rseg.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\trx0sys.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\trx0trx.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\trx0types.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\trx0undo.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\trx0xa.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\usr0sess.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\usr0types.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\ut0byte.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\ut0dbg.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\ut0list.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\ut0lst.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\ut0mem.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\ut0rnd.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\ut0sort.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\ut0ut.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\ut0vec.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\innobase\include\ut0wqueue.h">
+      <Filter>storage\innobase\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="storage\innobase\include\btr0btr.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\btr0cur.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\btr0pcur.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\btr0sea.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\buf0buf.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\buf0flu.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\buf0lru.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\data0data.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\data0type.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\dict0boot.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\dict0crea.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\dict0dict.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\dict0load.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\dict0mem.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\dyn0dyn.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\eval0eval.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\eval0proc.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\fsp0fsp.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\fut0fut.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\fut0lst.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\ha0ha.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\hash0hash.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\ibuf0ibuf.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\lock0lock.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\lock0priv.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\log0log.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\log0recv.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\mach0data.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\mem0dbg.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\mem0mem.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\mem0pool.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\mtr0log.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\mtr0mtr.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\os0proc.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\os0sync.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\os0thread.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\page0cur.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\page0page.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\pars0opt.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\pars0pars.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\pars0sym.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\que0que.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\read0read.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\rem0cmp.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\rem0rec.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\row0ins.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\row0mysql.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\row0purge.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\row0row.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\row0sel.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\row0uins.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\row0umod.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\row0undo.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\row0upd.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\row0vers.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\srv0srv.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\sync0arr.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\sync0rw.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\sync0sync.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\thr0loc.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\trx0purge.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\trx0rec.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\trx0roll.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\trx0rseg.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\trx0sys.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\trx0trx.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\trx0undo.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\univ.i">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\usr0sess.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\ut0byte.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\ut0list.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\ut0mem.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\ut0rnd.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\ut0ut.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
+    <None Include="storage\innobase\include\ut0vec.ic">
+      <Filter>storage\innobase\include</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -37,8 +37,7 @@ struct mem_area_struct{
 /************************************************************************
 Creates a memory pool. */
 
-mem_pool_t*
-mem_pool_create(
+mem_pool_t* mem_pool_create(
 /*============*/
 			/* out: memory pool */
 	ulint	size);	/* in: pool size in bytes */
@@ -46,8 +45,7 @@ mem_pool_create(
 Allocates memory from a pool. NOTE: This low-level function should only be
 used in mem0mem.*! */
 
-void*
-mem_area_alloc(
+void* mem_area_alloc(
 /*===========*/
 				/* out, own: allocated memory buffer */
 	ulint		size,	/* in: allocated size in bytes; for optimum
@@ -57,8 +55,7 @@ mem_area_alloc(
 /************************************************************************
 Frees memory to a pool. */
 
-void
-mem_area_free(
+void mem_area_free(
 /*==========*/
 	void*		ptr,	/* in, own: pointer to allocated memory
 				buffer */
@@ -66,36 +63,31 @@ mem_area_free(
 /************************************************************************
 Returns the amount of reserved memory. */
 
-ulint
-mem_pool_get_reserved(
+ulint mem_pool_get_reserved(
 /*==================*/
 				/* out: reserved mmeory in bytes */
 	mem_pool_t*	pool);	/* in: memory pool */
 /************************************************************************
 Reserves the mem pool mutex. */
 
-void
-mem_pool_mutex_enter(void);
+void mem_pool_mutex_enter(void);
 /*======================*/
 /************************************************************************
 Releases the mem pool mutex. */
 
-void
-mem_pool_mutex_exit(void);
+void mem_pool_mutex_exit(void);
 /*=====================*/
 /************************************************************************
 Validates a memory pool. */
 
-ibool
-mem_pool_validate(
+ibool mem_pool_validate(
 /*==============*/
 				/* out: TRUE if ok */
 	mem_pool_t*	pool);	/* in: memory pool */
 /************************************************************************
 Prints info of a memory pool. */
 
-void
-mem_pool_print_info(
+void mem_pool_print_info(
 /*================*/
 	FILE*		outfile,/* in: output file to write to */
 	mem_pool_t*	pool);	/* in: memory pool */

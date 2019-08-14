@@ -149,9 +149,7 @@ mem_area_set_size(
 
 /************************************************************************
 Returns memory area free bit. */
-UNIV_INLINE
-ibool
-mem_area_get_free(
+UNIV_INLINE ibool mem_area_get_free(
 /*==============*/
 				/* out: TRUE if free */
 	mem_area_t*	area)	/* in: area */
@@ -164,9 +162,7 @@ mem_area_get_free(
 
 /************************************************************************
 Sets memory area free bit. */
-UNIV_INLINE
-void
-mem_area_set_free(
+UNIV_INLINE void mem_area_set_free(
 /*==============*/
 	mem_area_t*	area,	/* in: area */
 	ibool		free)	/* in: free bit value */
@@ -181,8 +177,7 @@ mem_area_set_free(
 /************************************************************************
 Creates a memory pool. */
 
-mem_pool_t*
-mem_pool_create(
+mem_pool_t* mem_pool_create(
 /*============*/
 			/* out: memory pool */
 	ulint	size)	/* in: pool size in bytes */
@@ -210,7 +205,8 @@ mem_pool_create(
 
 	used = 0;
 
-	while (size - used >= MEM_AREA_MIN_SIZE) {
+	while (size - used >= MEM_AREA_MIN_SIZE) 
+	{
 
 		i = ut_2_log(size - used);
 
@@ -242,9 +238,7 @@ mem_pool_create(
 
 /************************************************************************
 Fills the specified free list. */
-static
-ibool
-mem_pool_fill_free_list(
+static ibool mem_pool_fill_free_list(
 /*====================*/
 				/* out: TRUE if we were able to insert a
 				block to the free list */
@@ -257,7 +251,8 @@ mem_pool_fill_free_list(
 
 	ut_ad(mutex_own(&(pool->mutex)));
 
-	if (i >= 63) {
+	if (i >= 63) 
+	{
 		/* We come here when we have run out of space in the
 		memory pool: */
 
@@ -266,7 +261,8 @@ mem_pool_fill_free_list(
 
 	area = UT_LIST_GET_FIRST(pool->free_list[i + 1]);
 
-	if (area == NULL) {
+	if (area == NULL) 
+	{
 		if (UT_LIST_GET_LEN(pool->free_list[i + 1]) > 0) {
 			ut_print_timestamp(stderr);
 
@@ -289,7 +285,8 @@ mem_pool_fill_free_list(
 		area = UT_LIST_GET_FIRST(pool->free_list[i + 1]);
 	}
 
-	if (UT_LIST_GET_LEN(pool->free_list[i + 1]) == 0) {
+	if (UT_LIST_GET_LEN(pool->free_list[i + 1]) == 0) 
+	{
 		mem_analyze_corruption(area);
 
 		ut_error;
@@ -316,8 +313,7 @@ mem_pool_fill_free_list(
 Allocates memory from a pool. NOTE: This low-level function should only be
 used in mem0mem.*! */
 
-void*
-mem_area_alloc(
+void*	mem_area_alloc(
 /*===========*/
 				/* out, own: allocated memory buffer */
 	ulint		size,	/* in: allocated size in bytes; for optimum
@@ -338,10 +334,12 @@ mem_area_alloc(
 
 	area = UT_LIST_GET_FIRST(pool->free_list[n]);
 
-	if (area == NULL) {
+	if (area == NULL) 
+	{
 		ret = mem_pool_fill_free_list(n, pool);
 
-		if (ret == FALSE) {
+		if (ret == FALSE) 
+		{
 			/* Out of memory in memory pool: we try to allocate
 			from the operating system with the regular malloc: */
 
@@ -354,7 +352,8 @@ mem_area_alloc(
 		area = UT_LIST_GET_FIRST(pool->free_list[n]);
 	}
 
-	if (!mem_area_get_free(area)) {
+	if (!mem_area_get_free(area)) 
+	{
 		fprintf(stderr,
 			"InnoDB: Error: Removing element from mem pool"
 			" free list %lu though the\n"
@@ -367,7 +366,8 @@ mem_area_alloc(
 		mysql@lists.mysql.com where the free bit IS 1 in the
 		hex dump above */
 
-		if (mem_area_get_free(area)) {
+		if (mem_area_get_free(area)) 
+		{
 			fprintf(stderr,
 				"InnoDB: Probably a race condition"
 				" because now the area is marked free!\n");
@@ -376,7 +376,8 @@ mem_area_alloc(
 		ut_error;
 	}
 
-	if (UT_LIST_GET_LEN(pool->free_list[n]) == 0) {
+	if (UT_LIST_GET_LEN(pool->free_list[n]) == 0) 
+	{
 		fprintf(stderr,
 			"InnoDB: Error: Removing element from mem pool"
 			" free list %lu\n"
@@ -407,9 +408,7 @@ mem_area_alloc(
 
 /************************************************************************
 Gets the buddy of an area, if it exists in pool. */
-UNIV_INLINE
-mem_area_t*
-mem_area_get_buddy(
+UNIV_INLINE mem_area_t* mem_area_get_buddy(
 /*===============*/
 				/* out: the buddy, NULL if no buddy in pool */
 	mem_area_t*	area,	/* in: memory area */
@@ -448,8 +447,7 @@ mem_area_get_buddy(
 /************************************************************************
 Frees memory to a pool. */
 
-void
-mem_area_free(
+void mem_area_free(
 /*==========*/
 	void*		ptr,	/* in, own: pointer to allocated memory
 				buffer */
@@ -464,7 +462,8 @@ mem_area_free(
 	/* It may be that the area was really allocated from the OS with
 	regular malloc: check if ptr points within our memory pool */
 
-	if ((byte*)ptr < pool->buf || (byte*)ptr >= pool->buf + pool->size) {
+	if ((byte*)ptr < pool->buf || (byte*)ptr >= pool->buf + pool->size) 
+	{
 		ut_free(ptr);
 
 		return;
@@ -472,7 +471,8 @@ mem_area_free(
 
 	area = (mem_area_t*) (((byte*)ptr) - MEM_AREA_EXTRA_SIZE);
 
-	if (mem_area_get_free(area)) {
+	if (mem_area_get_free(area)) 
+	{
 		fprintf(stderr,
 			"InnoDB: Error: Freeing element to mem pool"
 			" free list though the\n"
@@ -485,7 +485,8 @@ mem_area_free(
 	size = mem_area_get_size(area);
 	UNIV_MEM_FREE(ptr, size - MEM_AREA_EXTRA_SIZE);
 
-	if (size == 0) {
+	if (size == 0) 
+	{
 		fprintf(stderr,
 			"InnoDB: Error: Mem area size is 0. Possibly a"
 			" memory overrun of the\n"
@@ -496,7 +497,8 @@ mem_area_free(
 	}
 
 #ifdef UNIV_LIGHT_MEM_DEBUG
-	if (((byte*)area) + size < pool->buf + pool->size) {
+	if (((byte*)area) + size < pool->buf + pool->size) 
+	{
 
 		ulint	next_size;
 
@@ -552,7 +554,9 @@ mem_area_free(
 		mem_area_free(new_ptr, pool);
 
 		return;
-	} else {
+	}
+	else 
+	{
 		UT_LIST_ADD_FIRST(free_list, pool->free_list[n], area);
 
 		mem_area_set_free(area, TRUE);
@@ -571,8 +575,7 @@ mem_area_free(
 /************************************************************************
 Validates a memory pool. */
 
-ibool
-mem_pool_validate(
+ibool mem_pool_validate(
 /*==============*/
 				/* out: TRUE if ok */
 	mem_pool_t*	pool)	/* in: memory pool */
@@ -586,13 +589,15 @@ mem_pool_validate(
 
 	free = 0;
 
-	for (i = 0; i < 64; i++) {
+	for (i = 0; i < 64; i++) 
+	{
 
 		UT_LIST_VALIDATE(free_list, mem_area_t, pool->free_list[i]);
 
 		area = UT_LIST_GET_FIRST(pool->free_list[i]);
 
-		while (area != NULL) {
+		while (area != NULL) 
+		{
 			ut_a(mem_area_get_free(area));
 			ut_a(mem_area_get_size(area) == ut_2_exp(i));
 
@@ -617,8 +622,7 @@ mem_pool_validate(
 /************************************************************************
 Prints info of a memory pool. */
 
-void
-mem_pool_print_info(
+void mem_pool_print_info(
 /*================*/
 	FILE*		outfile,/* in: output file to write to */
 	mem_pool_t*	pool)	/* in: memory pool */
@@ -631,8 +635,10 @@ mem_pool_print_info(
 
 	mutex_enter(&(pool->mutex));
 
-	for (i = 0; i < 64; i++) {
-		if (UT_LIST_GET_LEN(pool->free_list[i]) > 0) {
+	for (i = 0; i < 64; i++)
+	{
+		if (UT_LIST_GET_LEN(pool->free_list[i]) > 0) 
+		{
 
 			fprintf(outfile,
 				"Free list length %lu for"
@@ -650,8 +656,7 @@ mem_pool_print_info(
 /************************************************************************
 Returns the amount of reserved memory. */
 
-ulint
-mem_pool_get_reserved(
+ulint mem_pool_get_reserved(
 /*==================*/
 				/* out: reserved memory in bytes */
 	mem_pool_t*	pool)	/* in: memory pool */

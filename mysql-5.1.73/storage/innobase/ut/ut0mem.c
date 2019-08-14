@@ -43,9 +43,7 @@ ulint*	ut_mem_null_ptr	= NULL;
 
 /**************************************************************************
 Initializes the mem block list at database startup. */
-static
-void
-ut_mem_block_list_init(void)
+static void ut_mem_block_list_init(void)
 /*========================*/
 {
 	os_fast_mutex_init(&ut_list_mutex);
@@ -56,8 +54,7 @@ ut_mem_block_list_init(void)
 /**************************************************************************
 Allocates memory. */
 
-void*
-ut_malloc_low(
+void* ut_malloc_low(
 /*==========*/
 				/* out, own: allocated memory */
 	ulint	n,		/* in: number of bytes to allocate */
@@ -69,7 +66,8 @@ ut_malloc_low(
 
 	ut_ad((sizeof(ut_mem_block_t) % 8) == 0); /* check alignment ok */
 
-	if (!ut_mem_block_list_inited) {
+	if (!ut_mem_block_list_inited) 
+	{
 		ut_mem_block_list_init();
 	}
 retry:
@@ -77,8 +75,10 @@ retry:
 
 	ret = malloc(n + sizeof(ut_mem_block_t));
 
-	if (ret == NULL && retry_count < 60) {
-		if (retry_count == 0) {
+	if (ret == NULL && retry_count < 60) 
+	{
+		if (retry_count == 0) 
+		{
 			ut_print_timestamp(stderr);
 
 			fprintf(stderr,
@@ -121,7 +121,8 @@ retry:
 		goto retry;
 	}
 
-	if (ret == NULL) {
+	if (ret == NULL) 
+	{
 		/* Flush stderr to make more probable that the error
 		message gets in the error file before we generate a seg
 		fault */
@@ -135,7 +136,8 @@ retry:
 		/* Intentional segfault on NetWare causes an abend. Avoid this
 		by graceful exit handling in ut_a(). */
 #if (!defined __NETWARE__)
-		if (assert_on_error) {
+		if (assert_on_error)
+		{
 			ut_print_timestamp(stderr);
 
 			fprintf(stderr,
@@ -144,7 +146,9 @@ retry:
 				"InnoDB: on Linux we get a stack trace.\n");
 
 			if (*ut_mem_null_ptr) ut_mem_null_ptr = 0;
-		} else {
+		}
+		else 
+		{
 			return(NULL);
 		}
 #else
@@ -200,8 +204,7 @@ man realloc in Linux, 2004:
 
        realloc()  changes the size of the memory block pointed to
        by ptr to size bytes.  The contents will be  unchanged  to
-       the minimum of the old and new sizes; newly allocated mem­
-       ory will be uninitialized.  If ptr is NULL,  the	 call  is
+       the minimum of the old and new sizes; newly allocated mem?       ory will be uninitialized.  If ptr is NULL,  the	 call  is
        equivalent  to malloc(size); if size is equal to zero, the
        call is equivalent to free(ptr).	 Unless ptr is	NULL,  it
        must  have  been	 returned by an earlier call to malloc(),

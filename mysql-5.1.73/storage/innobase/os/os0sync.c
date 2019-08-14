@@ -563,8 +563,7 @@ os_mutex_create(
 /**************************************************************
 Acquires ownership of a mutex semaphore. */
 
-void
-os_mutex_enter(
+void os_mutex_enter(
 /*===========*/
 	os_mutex_t	mutex)	/* in: mutex to acquire */
 {
@@ -649,8 +648,7 @@ os_mutex_free(
 /*************************************************************
 Initializes an operating system fast mutex semaphore. */
 
-void
-os_fast_mutex_init(
+void os_fast_mutex_init(
 /*===============*/
 	os_fast_mutex_t*	fast_mutex)	/* in: fast mutex */
 {
@@ -665,7 +663,8 @@ os_fast_mutex_init(
 	ut_a(0 == pthread_mutex_init(fast_mutex, MY_MUTEX_INIT_FAST));
 #endif
 #endif
-	if (os_sync_mutex_inited) {
+	if (os_sync_mutex_inited) 
+	{
 		/* When creating os_sync_mutex itself (in Unix) we cannot
 		reserve it */
 
@@ -682,8 +681,7 @@ os_fast_mutex_init(
 /**************************************************************
 Acquires ownership of a fast mutex. */
 
-void
-os_fast_mutex_lock(
+void os_fast_mutex_lock(
 /*===============*/
 	os_fast_mutex_t*	fast_mutex)	/* in: mutex to acquire */
 {
@@ -697,8 +695,7 @@ os_fast_mutex_lock(
 /**************************************************************
 Releases ownership of a fast mutex. */
 
-void
-os_fast_mutex_unlock(
+void os_fast_mutex_unlock(
 /*=================*/
 	os_fast_mutex_t*	fast_mutex)	/* in: mutex to release */
 {

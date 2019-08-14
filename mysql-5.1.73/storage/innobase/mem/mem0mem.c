@@ -90,8 +90,7 @@ Allocates a single buffer of memory from the dynamic memory of
 the C compiler. Is like malloc of C. The buffer must be freed
 with mem_free. */
 
-void*
-mem_alloc_func_noninline(
+void* mem_alloc_func_noninline(
 /*=====================*/
 					/* out, own: free storage */
 	ulint		n,		/* in: desired number of bytes */
@@ -104,8 +103,7 @@ mem_alloc_func_noninline(
 /**************************************************************************
 Duplicates a NUL-terminated string, allocated from a memory heap. */
 
-char*
-mem_heap_strdup(
+char* mem_heap_strdup(
 /*============*/
 				/* out, own: a copy of the string */
 	mem_heap_t*	heap,	/* in: memory heap where string is allocated */
@@ -177,9 +175,7 @@ mem_heap_strcat(
 
 /********************************************************************
 Helper function for mem_heap_printf. */
-static
-ulint
-mem_heap_printf_low(
+static ulint mem_heap_printf_low(
 /*================*/
 				/* out: length of formatted string,
 				including terminating NUL */

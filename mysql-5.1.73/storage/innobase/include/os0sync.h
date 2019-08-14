@@ -242,15 +242,13 @@ os_fast_mutex_unlock(
 /*************************************************************
 Initializes an operating system fast mutex semaphore. */
 
-void
-os_fast_mutex_init(
+void os_fast_mutex_init(
 /*===============*/
 	os_fast_mutex_t*	fast_mutex);	/* in: fast mutex */
 /**************************************************************
 Acquires ownership of a fast mutex. */
 
-void
-os_fast_mutex_lock(
+void os_fast_mutex_lock(
 /*===============*/
 	os_fast_mutex_t*	fast_mutex);	/* in: mutex to acquire */
 /**************************************************************
