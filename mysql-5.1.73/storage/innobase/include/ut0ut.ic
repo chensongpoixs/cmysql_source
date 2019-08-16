@@ -133,9 +133,8 @@ ut_2pow_round(
 /*****************************************************************
 Calculates fast the 2-logarithm of a number, rounded upward to an
 integer. */
-UNIV_INLINE
-ulint
-ut_2_log(
+// ∑÷≈‰blockµƒÀ„∑®
+UNIV_INLINE ulint  ut_2_log(
 /*=====*/
 			/* out: logarithm in the base 2, rounded upward */
 	ulint	n)	/* in: number != 0 */
@@ -148,10 +147,12 @@ ut_2_log(
 
 	n = n - 1;
 
-	for (;;) {
+	for (;;) 
+	{
 		n = n / 2;
 
-		if (n == 0) {
+		if (n == 0) 
+		{
 			break;
 		}
 
@@ -163,9 +164,7 @@ ut_2_log(
 
 /*****************************************************************
 Calculates 2 to power n. */
-UNIV_INLINE
-ulint
-ut_2_exp(
+UNIV_INLINE ulint ut_2_exp(
 /*=====*/
 			/* out: 2 to power n */
 	ulint	n)	/* in: number */

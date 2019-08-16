@@ -105,8 +105,7 @@ ulint		mem_n_threads_inside		= 0;
 /************************************************************************
 Reserves the mem pool mutex. */
 
-void
-mem_pool_mutex_enter(void)
+void mem_pool_mutex_enter(void)
 /*======================*/
 {
 	mutex_enter(&(mem_comm_pool->mutex));
@@ -115,8 +114,7 @@ mem_pool_mutex_enter(void)
 /************************************************************************
 Releases the mem pool mutex. */
 
-void
-mem_pool_mutex_exit(void)
+void mem_pool_mutex_exit(void)
 /*=====================*/
 {
 	mutex_exit(&(mem_comm_pool->mutex));
@@ -124,9 +122,7 @@ mem_pool_mutex_exit(void)
 
 /************************************************************************
 Returns memory area size. */
-UNIV_INLINE
-ulint
-mem_area_get_size(
+UNIV_INLINE ulint mem_area_get_size(
 /*==============*/
 				/* out: size */
 	mem_area_t*	area)	/* in: area */
@@ -136,9 +132,7 @@ mem_area_get_size(
 
 /************************************************************************
 Sets memory area size. */
-UNIV_INLINE
-void
-mem_area_set_size(
+UNIV_INLINE void mem_area_set_size(
 /*==============*/
 	mem_area_t*	area,	/* in: area */
 	ulint		size)	/* in: size */
@@ -198,19 +192,37 @@ mem_pool_t* mem_pool_create(
 
 	/* Initialize the free lists */
 
-	for (i = 0; i < 64; i++) {
+	for (i = 0; i < 64; i++) 
+	{
 
 		UT_LIST_INIT(pool->free_list[i]);
 	}
 
 	used = 0;
-
+	// mysql 中的block分配 从大到小依次
+	// 16 => 65536
+	// 15 => 32768
+	// 14 => 16384
+	// 13 => 8192
+	// 12 => 4096
+	// 11 => 2048
+	// 10 => 1024
+	// 9  => 512
+	// 8  => 256
+	// 7  => 128
+	// 6  => 64
+	// 5  => 32
+	// 4  => 16
+	// 3  => 8
+	// 2  => 4
+	// 1  => 2
 	while (size - used >= MEM_AREA_MIN_SIZE) 
 	{
-
+		// mysql 分配block的算法
 		i = ut_2_log(size - used);
-
-		if (ut_2_exp(i) > size - used) {
+		
+		if (ut_2_exp(i) > size - used) 
+		{
 
 			/* ut_2_log rounds upward */
 
@@ -218,11 +230,10 @@ mem_pool_t* mem_pool_create(
 		}
 
 		area = (mem_area_t*)(pool->buf + used);
-
+		// 设置block的大小
 		mem_area_set_size(area, ut_2_exp(i));
 		mem_area_set_free(area, TRUE);
-		UNIV_MEM_FREE(MEM_AREA_EXTRA_SIZE + (byte*) area,
-			      ut_2_exp(i) - MEM_AREA_EXTRA_SIZE);
+		UNIV_MEM_FREE(MEM_AREA_EXTRA_SIZE + (byte*) area, ut_2_exp(i) - MEM_AREA_EXTRA_SIZE);
 
 		UT_LIST_ADD_FIRST(free_list, pool->free_list[i], area);
 
@@ -258,7 +269,7 @@ static ibool mem_pool_fill_free_list(
 
 		return(FALSE);
 	}
-
+	// 取当前block的后面的一个block
 	area = UT_LIST_GET_FIRST(pool->free_list[i + 1]);
 
 	if (area == NULL) 
@@ -331,7 +342,7 @@ void*	mem_area_alloc(
 	mem_n_threads_inside++;
 
 	ut_a(mem_n_threads_inside == 1);
-
+	// 有可能该block 已经被使用了， 还没有释放
 	area = UT_LIST_GET_FIRST(pool->free_list[n]);
 
 	if (area == NULL) 
