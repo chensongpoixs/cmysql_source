@@ -19,6 +19,18 @@
     <Filter Include="storage\innobase\os">
       <UniqueIdentifier>{2546448c-d27e-4437-839d-f62538a114da}</UniqueIdentifier>
     </Filter>
+    <Filter Include="sql">
+      <UniqueIdentifier>{e288cc37-560f-43f3-bb89-edcee0c3ae5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sql\share">
+      <UniqueIdentifier>{29d6f281-3149-4515-a3b5-348bcfeeb95b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="server-tools">
+      <UniqueIdentifier>{600d0bf6-af14-4a99-bd6b-c6783a598bd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="server-tools\instance-manager">
+      <UniqueIdentifier>{b8f048f4-4b37-4f02-9dee-e685d52cabcd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="storage\innobase\mem\mem0dbg.c">
@@ -65,6 +77,465 @@
     </ClCompile>
     <ClCompile Include="storage\innobase\os\os0thread.c">
       <Filter>storage\innobase\os</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\debug_sync.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\derror.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\des_key_file.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\discover.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\event_data_objects.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\event_db_repository.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\event_parse_data.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\event_queue.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\event_scheduler.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\events.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\field.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\field_conv.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\filesort.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\gen_lex_hash.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\gstream.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\ha_ndbcluster.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\ha_ndbcluster_binlog.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\ha_ndbcluster_cond.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\ha_partition.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\handler.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\hash_filo.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\hostname.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\init.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\item.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\item_buff.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\item_cmpfunc.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\item_create.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\item_func.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\item_geofunc.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\item_row.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\item_strfunc.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\item_subselect.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\item_sum.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\item_timefunc.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\item_xmlfunc.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\key.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\lock.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\log.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\log_event.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\log_event_old.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\mf_iocache.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\my_decimal.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\my_lock.c">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\mysqld.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\net_serv.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\nt_servc.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\opt_range.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\opt_sum.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\parse_file.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\partition_info.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\password.c">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\procedure.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\protocol.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\records.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\repl_failsafe.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\rpl_filter.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\rpl_injector.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\rpl_mi.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\rpl_record.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\rpl_record_old.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\rpl_reporting.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\rpl_rli.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\rpl_tblmap.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\rpl_utility.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\scheduler.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\set_var.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\signal_handler.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\slave.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sp.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sp_cache.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sp_head.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sp_pcontext.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sp_rcontext.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\spatial.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_acl.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_analyse.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_base.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_binlog.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_builtin.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_cache.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_class.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_client.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_connect.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_crypt.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_cursor.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_db.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_delete.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_derived.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_do.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_error.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_handler.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_help.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_insert.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_lex.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_list.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_load.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_locale.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_manager.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_map.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_olap.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_parse.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_partition.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_plugin.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_prepare.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_profile.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_rename.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_repl.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_select.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_servers.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_show.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_state.c">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_string.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_table.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_tablespace.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_test.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_trigger.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_udf.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_union.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_update.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_view.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\sql_yacc.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\strfunc.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\table.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\thr_malloc.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\time.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\tztime.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\udf_example.c">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\uniques.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="sql\unireg.cc">
+      <Filter>sql</Filter>
+    </ClCompile>
+    <ClCompile Include="server-tools\instance-manager\angel.cc">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClCompile>
+    <ClCompile Include="server-tools\instance-manager\buffer.cc">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClCompile>
+    <ClCompile Include="server-tools\instance-manager\command.cc">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClCompile>
+    <ClCompile Include="server-tools\instance-manager\commands.cc">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClCompile>
+    <ClCompile Include="server-tools\instance-manager\guardian.cc">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClCompile>
+    <ClCompile Include="server-tools\instance-manager\IMService.cpp">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClCompile>
+    <ClCompile Include="server-tools\instance-manager\instance.cc">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClCompile>
+    <ClCompile Include="server-tools\instance-manager\instance_map.cc">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClCompile>
+    <ClCompile Include="server-tools\instance-manager\instance_options.cc">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClCompile>
+    <ClCompile Include="server-tools\instance-manager\listener.cc">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClCompile>
+    <ClCompile Include="server-tools\instance-manager\log.cc">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClCompile>
+    <ClCompile Include="server-tools\instance-manager\manager.cc">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClCompile>
+    <ClCompile Include="server-tools\instance-manager\messages.cc">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClCompile>
+    <ClCompile Include="server-tools\instance-manager\mysql_connection.cc">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClCompile>
+    <ClCompile Include="server-tools\instance-manager\mysqlmanager.cc">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClCompile>
+    <ClCompile Include="server-tools\instance-manager\options.cc">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClCompile>
+    <ClCompile Include="server-tools\instance-manager\parse.cc">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClCompile>
+    <ClCompile Include="server-tools\instance-manager\parse_output.cc">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClCompile>
+    <ClCompile Include="server-tools\instance-manager\priv.cc">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClCompile>
+    <ClCompile Include="server-tools\instance-manager\protocol.cc">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClCompile>
+    <ClCompile Include="server-tools\instance-manager\thread_registry.cc">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClCompile>
+    <ClCompile Include="server-tools\instance-manager\user_management_commands.cc">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClCompile>
+    <ClCompile Include="server-tools\instance-manager\user_map.cc">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClCompile>
+    <ClCompile Include="server-tools\instance-manager\WindowsService.cpp">
+      <Filter>server-tools\instance-manager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -383,6 +854,375 @@
     <ClInclude Include="storage\innobase\include\ut0wqueue.h">
       <Filter>storage\innobase\include</Filter>
     </ClInclude>
+    <ClInclude Include="sql\authors.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\client_settings.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\contributors.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\debug_sync.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\event_data_objects.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\event_db_repository.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\event_parse_data.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\event_queue.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\event_scheduler.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\events.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\field.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\gstream.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\ha_ndbcluster.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\ha_ndbcluster_binlog.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\ha_ndbcluster_cond.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\ha_ndbcluster_tables.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\ha_partition.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\handler.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\hash_filo.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\item.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\item_cmpfunc.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\item_create.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\item_func.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\item_geofunc.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\item_row.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\item_strfunc.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\item_subselect.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\item_sum.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\item_timefunc.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\item_xmlfunc.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\lex.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\lex_symbol.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\log.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\log_event.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\log_event_old.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\mem_root_array.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\message.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\my_decimal.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\mysql_priv.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\mysqld_suffix.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\nt_servc.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\opt_range.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\parse_file.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\partition_element.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\partition_info.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\procedure.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\protocol.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\repl_failsafe.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\rpl_constants.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\rpl_filter.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\rpl_injector.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\rpl_mi.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\rpl_record.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\rpl_record_old.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\rpl_reporting.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\rpl_rli.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\rpl_tblmap.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\rpl_utility.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\scheduler.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\set_var.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\slave.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sp.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sp_cache.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sp_head.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sp_pcontext.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sp_rcontext.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\spatial.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sql_acl.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sql_analyse.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sql_array.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sql_bitmap.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sql_cache.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sql_class.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sql_crypt.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sql_cursor.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sql_error.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sql_lex.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sql_list.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sql_map.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sql_partition.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sql_plugin.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sql_profile.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sql_repl.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sql_select.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sql_servers.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sql_show.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sql_sort.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sql_string.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sql_trigger.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sql_udf.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sql_view.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\sql_yacc.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\structs.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\table.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\tzfile.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\tztime.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="sql\unireg.h">
+      <Filter>sql</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\angel.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\buffer.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\command.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\commands.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\exit_codes.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\guardian.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\IMService.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\instance.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\instance_map.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\instance_options.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\listener.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\log.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\manager.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\messages.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\mysql_connection.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\mysql_manager_error.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\options.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\parse.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\parse_output.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\portability.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\priv.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\protocol.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\thread_registry.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\user_management_commands.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\user_map.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
+    <ClInclude Include="server-tools\instance-manager\WindowsService.h">
+      <Filter>server-tools\instance-manager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="storage\innobase\include\btr0btr.ic">
@@ -610,5 +1450,48 @@
     <None Include="storage\innobase\include\ut0vec.ic">
       <Filter>storage\innobase\include</Filter>
     </None>
+    <None Include="sql\Makefile.am">
+      <Filter>sql</Filter>
+    </None>
+    <None Include="sql\Makefile.in">
+      <Filter>sql</Filter>
+    </None>
+    <None Include="sql\message.mc">
+      <Filter>sql</Filter>
+    </None>
+    <None Include="sql\MSG00001.bin">
+      <Filter>sql</Filter>
+    </None>
+    <None Include="sql\sql_builtin.cc.in">
+      <Filter>sql</Filter>
+    </None>
+    <None Include="sql\sql_yacc.yy">
+      <Filter>sql</Filter>
+    </None>
+    <None Include="sql\udf_example.def">
+      <Filter>sql</Filter>
+    </None>
+    <None Include="server-tools\instance-manager\Makefile.am">
+      <Filter>server-tools\instance-manager</Filter>
+    </None>
+    <None Include="server-tools\instance-manager\Makefile.in">
+      <Filter>server-tools\instance-manager</Filter>
+    </None>
+    <None Include="server-tools\instance-manager\README">
+      <Filter>server-tools\instance-manager</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="sql\CMakeLists.txt">
+      <Filter>sql</Filter>
+    </Text>
+    <Text Include="server-tools\instance-manager\CMakeLists.txt">
+      <Filter>server-tools\instance-manager</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="sql\message.rc">
+      <Filter>sql</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>
