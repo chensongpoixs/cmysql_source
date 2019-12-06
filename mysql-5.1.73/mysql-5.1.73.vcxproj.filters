@@ -31,6 +31,87 @@
     <Filter Include="server-tools\instance-manager">
       <UniqueIdentifier>{b8f048f4-4b37-4f02-9dee-e685d52cabcd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="storage\innobase\page">
+      <UniqueIdentifier>{8285ba30-c1dd-46c3-bb6a-ebe27ee31d21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\row">
+      <UniqueIdentifier>{582db3a5-5bd7-4e2d-97e1-f44d0fa6f5cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\rem">
+      <UniqueIdentifier>{f17ea43e-cd1c-4a0c-a757-d893e7802051}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\read">
+      <UniqueIdentifier>{8e184d6d-330a-48c0-91b8-ebc9ed35a2c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\que">
+      <UniqueIdentifier>{9c2bc43c-5dbd-4825-b60b-29f961407861}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\handler">
+      <UniqueIdentifier>{587db938-f2cb-48dc-a463-ab9d9aea33c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\dict">
+      <UniqueIdentifier>{8a296f4f-8a33-4ba9-836c-62ed80f9c924}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\buf">
+      <UniqueIdentifier>{845a4808-7473-4a06-8627-57ff771df593}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\btr">
+      <UniqueIdentifier>{8bac77cd-1495-4902-808b-e3f626526957}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\log">
+      <UniqueIdentifier>{32b83117-0262-476e-af59-e6d1ae96e3bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\ibuf">
+      <UniqueIdentifier>{40e04dc9-5e7d-49ad-bc35-5daaa8b3fad8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\lock">
+      <UniqueIdentifier>{65b52291-a4f7-4fbb-9d1d-055c6b840ccf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\dyn">
+      <UniqueIdentifier>{f7ad4c14-b685-45fc-a74f-764e9a179e14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\srv">
+      <UniqueIdentifier>{b14e8632-5268-4a12-becb-6d1cc7646be7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\sync">
+      <UniqueIdentifier>{56c31119-30c9-446d-8c40-301bec2167cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\usr">
+      <UniqueIdentifier>{c3714174-8582-4d72-be37-0daf43fa7192}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\trx">
+      <UniqueIdentifier>{effe742d-4a6e-4de1-930b-d1893f9bc78d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\thr">
+      <UniqueIdentifier>{d6e7acfe-1683-428d-ac0e-177a090acd0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\mtr">
+      <UniqueIdentifier>{a2efacb6-df95-45a0-889a-76b19a0a28a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\mach">
+      <UniqueIdentifier>{585456d4-2b42-4122-9793-74ab992f46cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\fsp">
+      <UniqueIdentifier>{9ef31605-3090-4054-b1f1-5984ea483075}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\fil">
+      <UniqueIdentifier>{d2cddf52-2d72-41e6-81cc-eebc78fb249a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\data">
+      <UniqueIdentifier>{92d3e09c-43b8-457a-b3c9-6c5e75cd0460}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\eval">
+      <UniqueIdentifier>{d547c2ac-617c-4a5e-b8eb-be3b11218105}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\fut">
+      <UniqueIdentifier>{9a81a69e-f1f2-4aa9-8e4e-1f398e0f13fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\ha">
+      <UniqueIdentifier>{bcbcd284-1794-46ed-a569-ad637a54db39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="storage\innobase\pars">
+      <UniqueIdentifier>{98df5bed-5164-4485-bcb9-33c400d6229b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="storage\innobase\mem\mem0dbg.c">
@@ -536,6 +617,213 @@
     </ClCompile>
     <ClCompile Include="server-tools\instance-manager\WindowsService.cpp">
       <Filter>server-tools\instance-manager</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\page\page0cur.c">
+      <Filter>storage\innobase\page</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\page\page0page.c">
+      <Filter>storage\innobase\page</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\row\row0ins.c">
+      <Filter>storage\innobase\row</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\row\row0mysql.c">
+      <Filter>storage\innobase\row</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\row\row0purge.c">
+      <Filter>storage\innobase\row</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\row\row0row.c">
+      <Filter>storage\innobase\row</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\row\row0sel.c">
+      <Filter>storage\innobase\row</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\row\row0uins.c">
+      <Filter>storage\innobase\row</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\row\row0umod.c">
+      <Filter>storage\innobase\row</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\row\row0undo.c">
+      <Filter>storage\innobase\row</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\row\row0upd.c">
+      <Filter>storage\innobase\row</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\row\row0vers.c">
+      <Filter>storage\innobase\row</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\rem\rem0cmp.c">
+      <Filter>storage\innobase\rem</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\rem\rem0rec.c">
+      <Filter>storage\innobase\rem</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\read\read0read.c">
+      <Filter>storage\innobase\read</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\que\que0que.c">
+      <Filter>storage\innobase\que</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\handler\ha_innodb.cc">
+      <Filter>storage\innobase\handler</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\dict\dict0boot.c">
+      <Filter>storage\innobase\dict</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\dict\dict0crea.c">
+      <Filter>storage\innobase\dict</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\dict\dict0dict.c">
+      <Filter>storage\innobase\dict</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\dict\dict0load.c">
+      <Filter>storage\innobase\dict</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\dict\dict0mem.c">
+      <Filter>storage\innobase\dict</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\buf\buf0buf.c">
+      <Filter>storage\innobase\buf</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\buf\buf0flu.c">
+      <Filter>storage\innobase\buf</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\buf\buf0lru.c">
+      <Filter>storage\innobase\buf</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\buf\buf0rea.c">
+      <Filter>storage\innobase\buf</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\btr\btr0btr.c">
+      <Filter>storage\innobase\btr</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\btr\btr0cur.c">
+      <Filter>storage\innobase\btr</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\btr\btr0pcur.c">
+      <Filter>storage\innobase\btr</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\btr\btr0sea.c">
+      <Filter>storage\innobase\btr</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\log\log0log.c">
+      <Filter>storage\innobase\log</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\log\log0recv.c">
+      <Filter>storage\innobase\log</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\ibuf\ibuf0ibuf.c">
+      <Filter>storage\innobase\ibuf</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\lock\lock0iter.c">
+      <Filter>storage\innobase\lock</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\lock\lock0lock.c">
+      <Filter>storage\innobase\lock</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\dyn\dyn0dyn.c">
+      <Filter>storage\innobase\dyn</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\srv\srv0que.c">
+      <Filter>storage\innobase\srv</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\srv\srv0srv.c">
+      <Filter>storage\innobase\srv</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\srv\srv0start.c">
+      <Filter>storage\innobase\srv</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\sync\sync0arr.c">
+      <Filter>storage\innobase\sync</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\sync\sync0rw.c">
+      <Filter>storage\innobase\sync</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\sync\sync0sync.c">
+      <Filter>storage\innobase\sync</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\usr\usr0sess.c">
+      <Filter>storage\innobase\usr</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\trx\trx0purge.c">
+      <Filter>storage\innobase\trx</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\trx\trx0rec.c">
+      <Filter>storage\innobase\trx</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\trx\trx0roll.c">
+      <Filter>storage\innobase\trx</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\trx\trx0rseg.c">
+      <Filter>storage\innobase\trx</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\trx\trx0sys.c">
+      <Filter>storage\innobase\trx</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\trx\trx0trx.c">
+      <Filter>storage\innobase\trx</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\trx\trx0undo.c">
+      <Filter>storage\innobase\trx</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\thr\thr0loc.c">
+      <Filter>storage\innobase\thr</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\mtr\mtr0log.c">
+      <Filter>storage\innobase\mtr</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\mtr\mtr0mtr.c">
+      <Filter>storage\innobase\mtr</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\mach\mach0data.c">
+      <Filter>storage\innobase\mach</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\fsp\fsp0fsp.c">
+      <Filter>storage\innobase\fsp</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\fil\fil0fil.c">
+      <Filter>storage\innobase\fil</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\data\data0data.c">
+      <Filter>storage\innobase\data</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\data\data0type.c">
+      <Filter>storage\innobase\data</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\eval\eval0eval.c">
+      <Filter>storage\innobase\eval</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\eval\eval0proc.c">
+      <Filter>storage\innobase\eval</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\fut\fut0fut.c">
+      <Filter>storage\innobase\fut</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\fut\fut0lst.c">
+      <Filter>storage\innobase\fut</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\ha\ha0ha.c">
+      <Filter>storage\innobase\ha</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\ha\hash0hash.c">
+      <Filter>storage\innobase\ha</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\pars\lexyy.c">
+      <Filter>storage\innobase\pars</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\pars\pars0grm.c">
+      <Filter>storage\innobase\pars</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\pars\pars0opt.c">
+      <Filter>storage\innobase\pars</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\pars\pars0pars.c">
+      <Filter>storage\innobase\pars</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\innobase\pars\pars0sym.c">
+      <Filter>storage\innobase\pars</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1223,6 +1511,9 @@
     <ClInclude Include="server-tools\instance-manager\WindowsService.h">
       <Filter>server-tools\instance-manager</Filter>
     </ClInclude>
+    <ClInclude Include="storage\innobase\handler\ha_innodb.h">
+      <Filter>storage\innobase\handler</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="storage\innobase\include\btr0btr.ic">
@@ -1479,6 +1770,18 @@
     </None>
     <None Include="server-tools\instance-manager\README">
       <Filter>server-tools\instance-manager</Filter>
+    </None>
+    <None Include="storage\innobase\pars\make_bison.sh">
+      <Filter>storage\innobase\pars</Filter>
+    </None>
+    <None Include="storage\innobase\pars\make_flex.sh">
+      <Filter>storage\innobase\pars</Filter>
+    </None>
+    <None Include="storage\innobase\pars\pars0grm.y">
+      <Filter>storage\innobase\pars</Filter>
+    </None>
+    <None Include="storage\innobase\pars\pars0lex.l">
+      <Filter>storage\innobase\pars</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
